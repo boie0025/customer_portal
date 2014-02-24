@@ -1,7 +1,7 @@
 module CustomerPortal
   module Authentication
     def authenticate
-      self.controller
+      raise NotImplementedError, 'Authenticate is not yet implemented.'
     end
   end
 end

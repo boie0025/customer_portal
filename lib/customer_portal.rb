@@ -1,10 +1,14 @@
-require "customer_portal/version"
+require 'customer_portal/version'
+require 'locomotive/plugin'
+require 'active_model' # Fix Locomotive::Plugin::ActiveModel namespacing.
 
 module CustomerPortal
-  include Locomotive::Plugin
+  class Base
+    include Locomotive::Plugin
 
-  before_page_render :authenticate
+    before_page_render :authenticate
 
-  require_relative './customer_portal/authentication'
-  require_relative './customer_portal/user'
+    require 'customer_portal/authentication'
+    require 'customer_portal/user'
+  end
 end

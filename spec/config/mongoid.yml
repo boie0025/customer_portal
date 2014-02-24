@@ -1,0 +1,6 @@
+test:
+  sessions:
+    default:
+      database: customer_portal_spec
+      hosts:
+        - localhost:27017

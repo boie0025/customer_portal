@@ -1,3 +1,1 @@
-RSpec.configure do |config|
-  config.include Mongoid::Matchers, type: :model
-end
+Mongoid.load!('./spec/config/mongoid.yml')
